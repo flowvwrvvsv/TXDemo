@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--TitleBarView 高度-->
+    <dimen name="dp_title_height">48dp</dimen>
+    <dimen name="dimen_apply_promoter_edit">48dp</dimen>
+    <dimen name="dimen_scan_result_info_height">20dp</dimen>
+    <dimen name="dimen_scan_result_info_top">8dp</dimen>
+
+    <!--主页tab高度-->
+    <dimen name="dp_tab_height">48dp</dimen>
+    <!--主页tab icon宽高-->
+    <dimen name="dp_tab_icon">24dp</dimen>
+    <!--主页tab 文字与icon边距-->
+    <dimen name="dp_tab_margin">0dp</dimen>
+    <!--主页tab文字字号-->
+    <dimen name="dp_tab_text_size">11dp</dimen>
+    <!--主页tab 上划线宽度-->
+    <dimen name="dp_tab_underline">0.5dp</dimen>
+
+    <!--glide加载圆角图片占位图圆角弧度-->
+    <dimen name="dp_placeholder_radius">6dp</dimen>
+
+    <!--LoadMoreView 文本字号-->
+    <dimen name="dp_load_more_text_size">14dp</dimen>
+
+
+    <dimen name="dp_banner_point">8dp</dimen>
+
+    <dimen name="dp_margin_item">10dp</dimen>
+    <dimen name="dp_elevation">4dp</dimen>
+    <dimen name="dp_radius">2dp</dimen>
+
+    <dimen name="dp_login_item_height">44dp</dimen>
+
+    <dimen name="dimen_search_find_item_size">14sp</dimen>
+    <dimen name="dimen_search_find_item_top">6dp</dimen>
+    <dimen name="dimen_base_info_title_size">13sp</dimen>
+    <dimen name="dimen_base_info_title_top">6dp</dimen>
+    <dimen name="dimen_add_sanfei_min_height">42dp</dimen>
+</resources>

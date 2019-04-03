@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                                       xmlns:soulwolf="http://schemas.android.com/tools"
+                                       android:layout_width="match_parent"
+                                       android:layout_height="match_parent"
+                                       android:background="@color/color_search_find_bkg">
+
+    <LinearLayout
+        android:id="@+id/container_find"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+
+        <ImageView
+            android:id="@+id/image_sanfei"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="姓名"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/text_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_search_find_edit"
+            android:gravity="center_vertical|left"
+            android:hint="请输入"
+            android:minHeight="@dimen/dimen_add_sanfei_min_height"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="性别"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/text_sex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_search_find_edit"
+            android:gravity="center_vertical|left"
+            android:hint="请输入"
+            android:minHeight="@dimen/dimen_add_sanfei_min_height"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="出生年月"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/text_birth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_search_find_edit"
+            android:gravity="center_vertical|left"
+            android:hint="请输入"
+            android:minHeight="@dimen/dimen_add_sanfei_min_height"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="缅甸身份证号"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/text_myanmar_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_search_find_edit"
+            android:gravity="center_vertical|left"
+            android:hint="请输入"
+            android:minHeight="@dimen/dimen_add_sanfei_min_height"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="14sp"/>
+
+        <com.tianxie.demo.widget.RatioCardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/sanfei_save"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="40dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:stateListAnimator="@drawable/lift_on_touch"
+            card_view:cardBackgroundColor="@color/login_btn"
+            card_view:cardElevation="2dp"
+            soulwolf:heightRatio="1"
+            soulwolf:widthRatio="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/login_btn"
+                android:gravity="center"
+                android:text="保存"
+                android:textColor="@color/white"
+                android:textSize="20sp"/>
+        </com.tianxie.demo.widget.RatioCardView>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

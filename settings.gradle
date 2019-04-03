@@ -1,0 +1,2 @@
+include ':app', ':library', ':faceplatform', ':faceplatform-ui', ':circlelibrary', ':zbar', ':camera'
+

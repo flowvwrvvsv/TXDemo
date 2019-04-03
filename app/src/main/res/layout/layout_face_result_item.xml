@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/item_all"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/shape_search_find_item_all_bkg"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/face_container_iamge"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp">
+
+
+        <LinearLayout
+            android:id="@+id/item_container_native"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/shape_search_find_item"
+            android:orientation="vertical"
+            android:padding="2dp">
+
+
+            <ImageView
+                android:id="@+id/face_result_native"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <com.android.tu.circlelibrary.CirclePercentBar
+                android:id="@+id/circle_bar"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="4dp"
+                app:arcColor="@color/colorPrimary"
+                app:arcEndColor="@color/color_search_find_title_bkg"
+                app:arcStartColor="@color/login_btn"
+                app:arcWidth="8dp"
+                app:centerTextColor="@color/white"
+                app:centerTextSize="10sp"
+                app:circleRadius="32dp"/>
+
+            <TextView
+                android:id="@+id/face_result_item_similarity_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="相似度"
+                android:textColor="@color/white"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/item_container_net"
+
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/shape_search_find_item"
+            android:orientation="vertical"
+            android:padding="2dp">
+
+
+            <ImageView
+                android:id="@+id/face_result_net"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/item_container_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/login_btn"
+        android:minHeight="48dp"
+        android:orientation="horizontal"
+        android:paddingLeft="12dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/item_container_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="姓名："
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dimen_search_find_item_size"/>
+
+
+                            <TextView
+                                android:id="@+id/item_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left"
+                                android:text="李英志"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dimen_search_find_item_size"/>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:orientation="horizontal">
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="性别："
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dimen_search_find_item_size"/>
+
+
+                            <TextView
+                                android:id="@+id/item_sex"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left"
+                                android:text="男"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dimen_search_find_item_size"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_search_find_item_top"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="证件号："
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/dimen_search_find_item_size"/>
+
+
+                    <TextView
+                        android:id="@+id/item_document_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="MM312523121"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/dimen_search_find_item_size"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/item_sanfei_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="怀疑为三非人员"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:visibility="gone"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/more_info_container"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+
+            <TextView
+                android:id="@+id/item_more_info"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/color_search_find_title_bkg"
+                android:gravity="center"
+                android:text="更多信息"
+                android:textColor="@color/white"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

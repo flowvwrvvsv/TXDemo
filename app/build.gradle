@@ -1,0 +1,112 @@
+apply plugin: 'com.android.application'
+def dbflow_version = "3.0.0-beta4"
+def ext = rootProject.ext
+android {
+    compileSdkVersion ext.compileSdkVersion
+    defaultConfig {
+        applicationId "com.tianxie.demo"
+        minSdkVersion ext.minSdkVersion
+        targetSdkVersion ext.targetSdkVersion
+        versionCode ext.versionCode
+        versionName ext.versionName
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField "String", "BASE_URL", "\"http://211.149.182.113:8090/\""
+
+//        manifestPlaceholders = [
+//                app_channel   : "FastLib",
+//                bugly_id      : "a66ee7eb32"
+//        ]
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    dexOptions {
+        javaMaxHeapSize "Xg"
+    }
+
+    signingConfigs {
+
+        def password = "tx123456"
+        def alias = "key"
+        def filePath = "D:/StudioProjects/TXDemo/tx.jks"  //如  ../facesharp.jks//签名文件路径
+
+        debug {
+            keyAlias alias
+            keyPassword password
+            storeFile file(filePath)
+            storePassword(password)
+        }
+        release {
+            keyAlias alias
+            keyPassword password
+            storeFile file(filePath)
+            storePassword(password)
+        }
+    }
+
+    buildTypes {
+        debug {
+            //是否debug模式用于控制是否打印log等
+            debuggable true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //signingConfig signingConfigs.release
+        }
+        release {
+            debuggable false
+            zipAlignEnabled true //是否支持Zip Align
+            //shrinkResources true //是否清理无用资源
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //signingConfig signingConfigs.release
+        }
+    }
+
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    gradle.projectsEvaluated {
+        tasks.withType(JavaCompile) {
+            options.compilerArgs << "-Xlint:deprecation" << '-Xlint:-unchecked'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':library')
+    implementation project(':camera')
+    implementation project(':faceplatform')
+    implementation project(':circlelibrary')
+    implementation project(':faceplatform-ui')
+    implementation 'com.yanzhenjie:permission:2.0.0-rc4'
+
+    //文件选择器
+    implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.2.3'
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.5.1'
+    //图片加载 4.X
+    //以上库library里使用provided只是编译使用时需根据项目选择相应版本
+    implementation 'cn.bingoogolapple:bga-banner:2.1.7@aar'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.5.1'
+    //万能适配器--一般都需要吧
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.45-androidx'
+    implementation 'net.soulwolf.widget:ratiolayout:1.0.0'
+    implementation 'com.android.support:cardview-v7:27.1.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
+
+    annotationProcessor "com.github.Raizlabs.DBFlow:dbflow-processor:${dbflow_version}"
+    implementation "com.github.Raizlabs.DBFlow:dbflow-core:${dbflow_version}"
+    implementation "com.github.Raizlabs.DBFlow:dbflow:${dbflow_version}"
+}
