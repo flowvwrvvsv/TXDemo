@@ -9,7 +9,6 @@
         <item>个人中心</item>
     </string-array>
 
-
     <string-array name="arrays_scan_result">
         <item>缅甸身份证信息</item>
         <item>入境信息</item>
@@ -17,4 +16,6 @@
         <item>居留信息</item>
         <item>交通工具</item>
     </string-array>
+
+
 </resources>

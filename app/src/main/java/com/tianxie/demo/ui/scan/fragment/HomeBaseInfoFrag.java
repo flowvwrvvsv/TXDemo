@@ -19,7 +19,6 @@ import com.tianxie.demo.base.Common;
 import com.tianxie.demo.decoration.ScanResultDecoration;
 import com.tianxie.demo.entity.BaseInfo;
 import com.tianxie.demo.retrofit.repository.ApiRepository;
-import com.tianxie.demo.ui.scan.ScanResultActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,6 +28,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class HomeBaseInfoFrag extends BasisFragment
 {
+    private final int SIZE_QR_WIDTH = 66;
     public static final String HOME_BASE_ID = "HOME_BASE_ID";
     public static final String HOME_ON_ITEM_CLICK = "HOME_ON_ITEM_CLICK";
     public String idNumber;
@@ -121,7 +121,7 @@ public class HomeBaseInfoFrag extends BasisFragment
                         int headerWidth = rect.right - rect.left;
                         View v = container.findViewById(R.id.image_header);
                         ViewGroup.LayoutParams params = v.getLayoutParams();
-                        params.width = (int) (headerWidth * 0.8);
+                        params.width = (int) (headerWidth * 0.75);
                         params.height = (int) (headerHeight * 0.95);
                         v.setLayoutParams(params);
                         GlideManager.loadImgFit(Common.PIC_URL + baseInfo.getFaceUrl(), container.findViewById(R.id.image_header), R.drawable.shape_scan_base_error_image);
@@ -138,8 +138,8 @@ public class HomeBaseInfoFrag extends BasisFragment
 //                        int qrWidth = (rect.bottom - rect.top) - SizeUtil.dp2px(10) - headerHeight - 3;
                         v = container.findViewById(R.id.image_qr_code);
                         params = v.getLayoutParams();
-                        params.width = SizeUtil.dp2px(70);
-                        params.height = SizeUtil.dp2px(70);
+                        params.width = SizeUtil.dp2px(SIZE_QR_WIDTH);
+                        params.height = SizeUtil.dp2px(SIZE_QR_WIDTH);
                         v.setLayoutParams(params);
                         GlideManager.loadImgFit(Common.PIC_URL + baseInfo.getQrCodeUrl(), container.findViewById(R.id.image_qr_code), R.drawable.shape_scan_base_error_image);
                     }
